@@ -1,6 +1,6 @@
 export type CompiledColumn = Array<Array<string | number>>
 
-export const compileToColumn = (data: string) => {
+export const compileToColumn = (data: string): CompiledColumn => {
   const lines = data.split('\n')
 
   const columnsSize = lines[0].split(',')

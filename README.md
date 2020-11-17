@@ -27,7 +27,7 @@ Using with external cvs file:
 const data = await readCSVFile(pathFile, {
     encoding: 'utf8',
     parse: 'object'
-})
+});
 ``` 
 **encondig** - CSV file encoding.
 
@@ -53,7 +53,7 @@ CSV file:
 
 Returns:
 
-- **Column** option:
+- **Columns** option:
 
 ``` js
 [
@@ -63,7 +63,7 @@ Returns:
   [ '2019', 0, 1, 1, 3, 4, 0, 0, 0 ]
 ]
 ```
-- **Row** option:
+- **Rows** option:
 
 ``` js 
 [
@@ -90,8 +90,17 @@ Returns:
   }
 ```
 
+---
+
+Compiling directly:
+
+``` js   
+  const columns = compileToColumn(csv); 
+  const row = compileToRow(csv);
+  const object = compileToObject(csv);
+```
 
 ---
 
-Create by: **Arthur Reis**
+Created by: **Arthur Reis**
 
