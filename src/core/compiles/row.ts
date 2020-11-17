@@ -1,7 +1,7 @@
 
-export type CompilerRowReturn = Array<Array<string | number>>
+export type CompiledRow = Array<Array<string | number>>
 
-export const CompilerToRows = (data: string): CompilerRowReturn => {
+export const compileToRow = (data: string): CompiledRow => {
   const lines = data.split('\n')
 
   const rows = lines.map((r) => r.split(',').map((r) => {

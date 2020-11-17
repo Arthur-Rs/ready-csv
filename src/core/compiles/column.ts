@@ -1,13 +1,13 @@
-export type CompilerColumnReturn = Array<Array<string | number>>
+export type CompiledColumn = Array<Array<string | number>>
 
-export const CompilerToColumns = (data: string) => {
+export const compileToColumn = (data: string) => {
   const lines = data.split('\n')
 
   const columnsSize = lines[0].split(',')
 
   const rows =  lines.map((line) => line.split(',')) 
 
-  let columns: CompilerColumnReturn  = []
+  let columns: CompiledColumn = []
 
   columnsSize.forEach((_, columnSize) => {   
     const column = lines.map((_, lineIndex) => {

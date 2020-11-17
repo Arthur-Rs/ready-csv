@@ -1,10 +1,10 @@
-export type CompilerObjectReturn = {
+export type CompiledObject = {
   [key: string]: Array<string | number>
 }
 
-export const CompilerToObject = (data: string): CompilerObjectReturn => {
+export const compileToObject = (data: string): CompiledObject => {
   const lines = data.split('\n')
-  let columns: CompilerObjectReturn = {}
+  let columns: CompiledObject = {}
   let keys: Array<string> = []
 
   lines[0].split(',').forEach((keyName) => {
